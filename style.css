@@ -23,7 +23,7 @@ body {
 .shell {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto auto;
   padding: clamp(2rem, 6vw, 6rem);
 }
 
@@ -32,12 +32,14 @@ body {
   max-width: 880px;
 }
 
-.eyebrow {
+.eyebrow,
+.catalogue-label {
   font-size: .78rem;
   letter-spacing: .22em;
   color: var(--accent);
-  margin-bottom: 1rem;
 }
+
+.eyebrow { margin-bottom: 1rem; }
 
 h1 {
   margin: 0;
@@ -71,6 +73,50 @@ h1 {
   color: var(--muted);
   margin: 0;
   max-width: 620px;
+}
+
+.catalogue {
+  max-width: 660px;
+  margin-top: clamp(5rem, 12vh, 9rem);
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.catalogue h2 {
+  margin: .65rem 0 .9rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -.02em;
+}
+
+.catalogue p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.soundcloud-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: .15rem;
+}
+
+.soundcloud-link:hover,
+.soundcloud-link:focus-visible {
+  color: var(--accent);
+}
+
+.quote {
+  margin-top: 2rem !important;
+  font-style: italic;
+  font-size: .94rem;
+}
+
+.quote span {
+  font-style: normal;
+  color: #756e80;
 }
 
 footer {
