@@ -22,9 +22,16 @@ body {
 
 .shell {
   min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   grid-template-rows: 1fr auto auto;
-  padding: clamp(2rem, 6vw, 6rem);
+  padding: clamp(1.25rem, 6vw, 6rem);
+}
+
+.hero,
+.catalogue {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero {
@@ -43,7 +50,7 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(3.7rem, 13vw, 9rem);
+  font-size: clamp(2.5rem, 13vw, 9rem);
   line-height: .88;
   letter-spacing: -.06em;
   font-weight: 800;
@@ -100,7 +107,9 @@ h1 {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1px solid var(--accent);
-  padding-bottom: .15rem;
+  min-height: 44px;
+  max-width: 100%;
+  padding: .75rem 0;
 }
 
 .soundcloud-link:hover,
